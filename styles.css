@@ -1,0 +1,320 @@
+*{
+	text-decoration:none;
+	margin :0;
+	padding:0;
+}
+
+.works_on_smartphone{
+
+}
+ul a{/*Para los link a debido que estan dentro de un ul(lista)*/
+	color:red;
+}
+p{
+	font-family:Verdana;
+}
+
+a{/*Para los link de abajo y todos los links que no esten dentro de una lista */ 
+        text-decoration:none; /*Para quitarle los subrayados a los links*/ 
+        color:blue; 
+} 
+a:hover{/*Para dar el efecto de sombreado al pasar la flecha por los links*/ 
+        background:#92B3AB; 
+} 
+ 
+
+ul{ /*Para quitarle cualquier estilo que tengan las listas*/
+	list-style: none;
+}
+
+.banner{
+	
+	background: url('https://images.unsplash.com/photo-1607988795691-3d0147b43231?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+	min-height:900px;
+	background-position: center;      /* center the image */
+}
+.banner_content{
+  width: 100%;
+  padding: 15px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+  font-size: 1.3em;
+  text-align:center;
+}
+
+.banner_fisica{
+
+	background: url('https://images.unsplash.com/photo-1607988795691-3d0147b43231?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        min-height:400px;
+        background-position: center;
+}
+
+.banner_content_fisica{
+  display:flex;
+  flex-direction:column;
+  margin:auto;
+  left:50%;
+  width: 100%;
+  padding: 15px;
+  text-align:center;
+  color: white;
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 700px) {
+	.banner_content_fisica{
+  	width: 100%;
+  	padding: 15px;
+  	position: absolute;
+  	top: 60%;
+  	left: 50%;
+  	transform: translateX(-50%) translateY(-50%);
+  	color: white;
+  	font-size: 1.3em;
+  	text-align:center;
+	}
+}
+
+
+
+/*EN este caso el div .cotainer solo tiene 3 hijos: headerbox, mainbox y footerbox. el resto son nietos */
+/*NOTA IMPORTANTE: todas las clases tiene que ser llamadas con .clase, por ejemplo 'main .links_finales{ }', debido a que la clases
+link_finales no es una division pero esta dentro de <main> , a diferencia de .logo, que SI es una division.*/
+.container { /**/
+	width:100%; /*Para que ocupe el 90% de la pantalla total*/
+	margin:auto; /*Para que la caja contenedora de todo este central por los cotados y con 20 px por arriba y abajo*/
+	display:flex; /*Sin el display:flex no funcionan el resto de funciones flex.*/
+	background:white;
+	/*OJO: este display solo tiene efecto en los 3 hijos, pero no en los nietos*/
+	/*Los hijos puedes utilizar el display:flex del padre pero si quieren utilizarlo en sus hijos, se tiene que llamar de nuevo a display:flex en ellos 
+          COmo se puede ver en .headerbox{}  */
+	flex-direction:column;  /*Hace que solo los 3 hijos de pongan en columna*/
+}
+
+.logo{
+	width:200px; /*Cambia el tamaño de la imagen logo*/
+	margin:auto;
+}
+
+.header-class{
+
+}
+
+
+.header-container{
+	background:#CDF9EE;
+	display:flex;
+	flex-flow : column wrap;
+}
+.header-links{
+	display:flex;
+	flex-flow: row nowrap;
+	justify-content:space-between;
+}
+@media screen and (max-width: 700px) {
+	.header-class{
+		width: 100%;
+		height: 150px;
+	}
+	.links_contenido{
+		justify-content:space-between;
+	}
+}
+
+
+
+.right{
+	display:flex;
+	flex-flow: column wrap;
+	justify-content:space-between;
+}
+
+			/*MAIN*/
+
+
+.main-class{
+	flex:auto;
+	
+}
+
+.main-container{
+	display:flex;
+	flex-flow : row wrap;
+}
+@media screen and (max-width: 700px) {
+	.main-container{
+		display:flex;
+		flex-flow : column wrap;
+	}
+}
+
+
+
+.article-class{
+	flex:2;
+	background:#CDF9EE;
+	overflow-y: auto;
+}
+
+.aside-class{
+	flex:1;
+	background:#e5e2dd; /*; /*url('https://images.unsplash.com/photo-1610987653945-fe23ff170a2f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80');*/
+	overflow-y: auto;
+}
+
+
+.articlebox{
+	
+}
+
+.asidebox{
+	background:#d7d1c7;
+}
+
+		/*Contenido*/
+
+.intro {
+	background:#9FD4C8;
+	padding:15px;
+	text-align:center;
+	border:3px solid red;
+	width:70%;
+	margin:auto;
+}
+.intro p{
+	font-size:20px;
+}
+
+
+.extra_infor{
+
+	background:#9FD4C8;
+
+	padding:15px;
+	border:1px solid red;
+	width:90%;
+	margin:auto;
+}
+
+.img_extra_infor{
+	margin:auto;
+	display:flex;
+}
+
+
+.tools_container{
+	display:flex;
+	flex-flow:column wrap;
+	justify-content:space-betweent;
+}
+.programming{
+	display:flex;
+	flex-flow: row wrap;
+	justify-content:space-around;
+	
+}
+.maths{
+	display:flex;
+	flex-flow: row wrap;
+	justify-content:space-around;
+	
+}
+.physics{
+	display:flex;
+	flex-flow: row wrap;
+	justify-content:space-around;
+	
+}
+
+/*NOTA IMPORTANTEEE: PARA QUE EL TEXTO NO SE SALGA DE SU MARCO ES ORDEN CORRECTO ES COMO EN .text_tools{}, es decir primero el text-align:center y luego el margin:auto, en ese orden*/
+.texto_tools{
+	text-align:center;
+	width:60%;
+	margin:auto;
+}
+
+
+
+
+.links_contenido {
+	padding:25px;
+
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+
+
+main .links_finales{
+	padding:50px; /*Para ordenar los ultimos links de tal forma que esten separados, se le aplica un display:flex porque necesito separarlos y ponerlos en fila */
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+        flex-wrap:wrap;
+}
+main .links_finales a{
+	text-decoration:none;
+	font-size:25px; /*Solo para quitarle la linea de abajo de los links, aumentarle el tamaño y ponerlo de color azul*/
+	padding:5px;
+	color:blue;
+	
+}
+
+
+.news_container{
+	margin:auto;
+	display:flex;
+	flex-direction:row;
+	align-items:center; 
+	justify-content:space-around;
+}
+
+.journals{
+	width:90px;
+}
+.news1{
+	text-align:center;
+}
+.news2{
+	text-align:center;
+}
+
+.news3{
+	text-align:center;
+}
+
+
+
+/*PARA EL VIDEO DE APLICACIONES*/
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/*PARA LA ULTIMA PAGINA TWEETS*/
+
+.tweets{
+	padding:20px;
+	display:flex; /*Dentro de .mainbox solo hay 2 divisiones articlebox y asidebox entonces se utiliza el display porque se necesita ponerlos en fila. */
+	flex-direction:row;
+	flex: auto; /*para que mainbox mantenga una altura y un ancho automáticos*/
+	flex-wrap:wrap; /*Para que los elementos que no entren en la pantalla se pongan abajo automaticamente*/
+}
+
+/*FOOTER*/
+.flooterbox{
+	text-align:center;
+
+
+}
